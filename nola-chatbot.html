@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte Nola</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <p class="page-title">Nola — Central de Suporte</p>
+
+  <div class="webhook-config">
+    <label><i class="ti ti-link"></i> URL do webhook N8N</label>
+    <input type="text" id="webhookUrl" placeholder="https://geomatos.app.n8n.cloud/webhook/nola-chatbot" value="https://geomatos.app.n8n.cloud/webhook/nola-chatbot" />
+  </div>
+
+  <div class="chat-wrapper">
+    <div class="chat-header">
+      <div class="avatar">S</div>
+      <div class="header-info">
+        <div class="header-name"> Suporte Nola</div>
+        <div class="header-status">
+          <span class="status-dot"></span> Online agora
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="messages">
+      <div class="msg bot">
+        <div class="msg-avatar">S</div>
+        <div>
+          <div class="msg-bubble">Olá! Sou a assistente de suporte da Nola 👋<br>Como posso te ajudar hoje?</div>
+          <div class="msg-time">agora</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="userInput" placeholder="Digite sua dúvida..." />
+      <button class="send-btn" id="sendBtn" aria-label="Enviar">
+        <i class="ti ti-send"></i>
+      </button>
+    </div>
+
+    <div class="powered">Powered by Nola CS &middot; IA by Groq &middot; Automação via N8N
+        <br>
+        <center>Created by Geovana Borges de Matos</center>
+    </div>
+  </div>
+
+  <div class="quick-questions">
+    <button class="quick-btn" onclick="sendQuick('A impressora não está imprimindo, o que faço?')">🖨️ Problema com impressora</button>
+    <button class="quick-btn" onclick="sendQuick('Como adiciono um item no cardápio?')">🍽️ Editar cardápio</button>
+    <button class="quick-btn" onclick="sendQuick('Esqueci minha senha, como recupero?')">🔑 Recuperar senha</button>
+    <button class="quick-btn" onclick="sendQuick('Como vejo o relatório de vendas?')">📊 Relatórios</button>
+    <button class="quick-btn" onclick="sendQuick('O iFood não está sincronizando')">🔄 Integração iFood</button>
+  </div>
+
+  <script src="./NolaChatBot.js">
+   
+  </script>
+</body>
+</html>
