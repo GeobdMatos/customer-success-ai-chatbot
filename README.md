@@ -57,9 +57,47 @@ A aplicação permite que usuários enviem perguntas diretamente para o webhook 
 
 ![Interface Web](./pagweb.png)
 
+# Como utilizar
 
-## Como utilizar
+### 1. Clone o repositório
 
+```bash id="rj3x7m"
+git clone https://github.com/GeobdMatos/customer-success-ai-chatbot.git
+```
+---
+
+### 2. Acesse a pasta do projeto
+
+```bash id="0w2mkt"
+cd customer-success-ai-chatbot
+```
+
+---
+
+### 3. Execute a interface web
+
+Abra o arquivo:
+
+```text id="g0b5xt"
+index.html
+```
+
+## Como funciona
+
+O fluxo da aplicação funciona da seguinte forma:
+
+```text id="0r7pva"
+Usuário → Interface Web → Webhook N8N → Google Sheets → Groq AI → Resposta
+```
+
+1. O usuário envia uma pergunta pela interface web;
+2. A mensagem é enviada para o webhook do N8N;
+3. O Google Sheets é utilizado como base de conhecimento;
+4. O node Code organiza o contexto;
+5. A IA processa as informações;
+6. O chatbot retorna uma resposta automatizada.
+
+---
 
 
 ## Tecnologias utilizadas
